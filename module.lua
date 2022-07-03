@@ -8,6 +8,10 @@ return
 			defaultRedirectPlace=newId
 		end,
 		redirectPlayers = function(playerTable,id)
+			if not playerTable then
+				error("No playerTable passed.",2) 
+			end
+			
 			if not id and defaultRedirectPlace ~= 0 then 
 			tps:TeleportAsync(defaultRedirectPlace,playerTable)
 			elseif not id and defaultRedirectPlace == 0 then 
