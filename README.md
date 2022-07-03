@@ -9,7 +9,7 @@ local module = require(Redo)
 module.setDefault(10104738225)
 
 game.Players.PlayerAdded:Connect(function(plr)
-	module.redirectPlayers({plr})
+	module.redirectPlayers({plr}, PlaceId) --PlaceId is optional, if you have done the setDefault part
 end)
 ```
 
@@ -18,7 +18,7 @@ Usage [Kicking]:
 local module = require(Redo)
 
 game.Players.PlayerAdded:Connect(function(plr)
-	module.kickPlayers({plr}, KickMessage) --KickMessage is optional!
+	module.kickPlayers({plr}, KickMessage) --KickMessage is optional
 end)
 ```
 
