@@ -7,6 +7,7 @@ Usage:
 ```lua
 local module = require(Redo)
 module.setDefault(gameId)
+
 game.Players.PlayerAdded:Connect(function(plr)
 	module.redirectPlayers({plr})
 end)
