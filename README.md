@@ -3,12 +3,23 @@ A simple roblox module to shorten down the amount of code for redirecting betwee
 
 When using this (**which you probably wont**) you don't have to credit me, as this is all very simple shit.
 
-Usage:
+Usage [Redirecting]:
 ```lua
 local module = require(Redo)
-module.setDefault(gameId)
+module.setDefault(10104738225)
 
 game.Players.PlayerAdded:Connect(function(plr)
 	module.redirectPlayers({plr})
 end)
 ```
+
+Usage [Kicking]:
+```lua
+local module = require(Redo)
+
+game.Players.PlayerAdded:Connect(function(plr)
+	module.kickPlayers({plr}, KickMessage) --KickMessage is optional!
+end)
+```
+
+I will update this github page when i add something new.
